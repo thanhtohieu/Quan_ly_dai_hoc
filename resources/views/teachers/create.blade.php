@@ -157,4 +157,4 @@
         });
     });
 </script>
-@endsection 
+@endsection
