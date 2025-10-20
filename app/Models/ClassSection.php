@@ -46,17 +46,11 @@ class ClassSection extends Model
         return $this->belongsTo(CourseOffering::class);
     }
 
-    /**
-     * Sinh viên đăng ký lớp học phần
-     */
     public function students(): BelongsToMany
     {
         return $this->belongsToMany(Student::class, 'enrollments')->withTimestamps();
     }
 
-    /**
-     * Các đăng ký lớp học phần
-     */
     public function enrollments(): HasMany
     {
         return $this->hasMany(Enrollment::class);
