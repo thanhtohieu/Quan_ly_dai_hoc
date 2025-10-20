@@ -6,17 +6,23 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
-        Schema::table('subjects', function (Blueprint $table) {
-            $table->renameColumn('difficulty_ratio', 'coefficient');
+        Schema::table('grades', function (Blueprint $table) {
+            //
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
-        Schema::table('subjects', function (Blueprint $table) {
-            $table->renameColumn('coefficient', 'difficulty_ratio');
+        Schema::table('grades', function (Blueprint $table) {
+            //
         });
     }
 };
