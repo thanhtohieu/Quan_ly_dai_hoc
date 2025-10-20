@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ClassSizeCoefficient;
+use Database\Factories\ClassSizeCoefficientFactory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
