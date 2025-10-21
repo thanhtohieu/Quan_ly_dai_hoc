@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="vi">
-<<<<<<< HEAD
-=======
-
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -127,148 +123,19 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
 
-<<<<<<< HEAD
-=======
-    <title>@yield('title', 'Hệ thống quản lý sinh viên')</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom CSS -->
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-        }
-
-        .sidebar {
-            min-height: calc(100vh - 56px);
-            background-color: #343a40;
-            color: #fff;
-        }
-
-        .sidebar .nav-link {
-            color: rgba(255, 255, 255, 0.8);
-            padding: 0.5rem 1rem;
-            margin: 0.2rem 0;
-        }
-
-        .sidebar .nav-link:hover {
-            color: #fff;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .sidebar .nav-link.active {
-            color: #fff;
-            background-color: #007bff;
-        }
-
-        .sidebar .nav-link i {
-            margin-right: 0.5rem;
-        }
-
-        .content {
-            padding: 20px;
-        }
-
-        .card {
-            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-            margin-bottom: 20px;
-        }
-
-        .card-header {
-            background-color: #f8f9fa;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-            font-weight: 600;
-        }
-
-        .table th {
-            background-color: #f8f9fa;
-        }
-
-        /* Custom pagination styles */
-        .pagination {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .pagination .page-item {
-            margin: 0 2px;
-        }
-
-        .pagination .page-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 36px;
-            height: 36px;
-            padding: 0 12px;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: 500;
-            color: #495057;
-            background-color: #fff;
-            border: 1px solid #dee2e6;
-            transition: all 0.2s ease-in-out;
-        }
-
-        .pagination .page-link:hover {
-            z-index: 2;
-            color: #0056b3;
-            text-decoration: none;
-            background-color: #e9ecef;
-            border-color: #dee2e6;
-        }
-
-        .pagination .page-item.active .page-link {
-            z-index: 3;
-            color: #fff;
-            background-color: #0d6efd;
-            border-color: #0d6efd;
-        }
-
-        .pagination .page-item.disabled .page-link {
-            color: #6c757d;
-            pointer-events: none;
-            background-color: #fff;
-            border-color: #dee2e6;
-        }
-
-        .pagination-container {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 12px 16px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        }
-
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
         /* Sidebar collapse on small screens */
         @media (max-width: 768px) {
             body.sidebar-collapsed .sidebar {
                 display: none;
             }
-<<<<<<< HEAD
-=======
-
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
             body.sidebar-collapsed .content {
                 margin-left: 0 !important;
             }
         }
     </style>
-<<<<<<< HEAD
     
-=======
-
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
     @stack('styles')
 </head>
-
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-primary">
@@ -279,13 +146,7 @@
                 <button id="sidebarToggle" class="btn btn-outline-light d-md-none me-2" type="button">
                     <i class="fas fa-bars"></i>
                 </button>
-<<<<<<< HEAD
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-=======
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -306,27 +167,19 @@
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">Đăng nhập</a>
-<<<<<<< HEAD
-=======
                                 </li>
                             @endif
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">Đăng ký</a>
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
-                                </li>
-                            @endif
+                            
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
+                                       onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         Đăng xuất
                                     </a>
@@ -355,7 +208,6 @@
                                 <small class="text-muted">{{ ucfirst(Auth::user()->role) }}</small>
                             </div>
                         </div>
-<<<<<<< HEAD
                         
                         <div class="nav flex-column">
                             <a class="nav-link {{ request()->routeIs('dashboard.*') ? 'active' : '' }}" href="{{ route('dashboard.index') }}">
@@ -363,16 +215,6 @@
                             </a>
 
                             @if(Auth::user()->role == 'admin' || Auth::user()->role == 'teacher')
-=======
-
-                        <div class="nav flex-column">
-                            <a class="nav-link {{ request()->routeIs('dashboard.*') ? 'active' : '' }}"
-                                href="{{ route('dashboard.index') }}">
-                                <i class="fas fa-tachometer-alt"></i> Dashboard
-                            </a>
-
-                            @if (Auth::user()->role == 'admin' || Auth::user()->role == 'teacher')
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                 @php
                                     $isActive = request()->routeIs(
                                         'faculties.*',
@@ -381,95 +223,49 @@
                                         'subjects.*',
                                         'teachers.*',
                                         'students.*',
-<<<<<<< HEAD
                                         'grades.*'
                                     );
                                 @endphp
                                 <div class="nav-group">
                                     <a class="nav-link" data-bs-toggle="collapse" href="#managementMenu" role="button" aria-expanded="{{ $isActive ? 'true' : 'false' }}" aria-controls="managementMenu">
-=======
-                                        'grades.*',
-                                    );
-                                @endphp
-                                <div class="nav-group">
-                                    <a class="nav-link" data-bs-toggle="collapse" href="#managementMenu" role="button"
-                                        aria-expanded="{{ $isActive ? 'true' : 'false' }}" aria-controls="managementMenu">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                         <i class="fas fa-users-cog"></i> Quản lý
                                     </a>
                                     <div class="collapse {{ $isActive ? 'show' : '' }}" id="managementMenu">
                                         <ul class="nav flex-column ms-3">
-<<<<<<< HEAD
                                             @if(Auth::user()->role == 'admin')
                                                 <li class="nav-item">
                                                     <a class="nav-link {{ request()->routeIs('faculties.*') ? 'active' : '' }}" href="{{ route('faculties.index') }}">
-=======
-                                            @if (Auth::user()->role == 'admin')
-                                                <li class="nav-item">
-                                                    <a class="nav-link {{ request()->routeIs('faculties.*') ? 'active' : '' }}"
-                                                        href="{{ route('faculties.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                                         <i class="fas fa-building"></i> Quản lý khoa
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-<<<<<<< HEAD
                                                     <a class="nav-link {{ request()->routeIs('majors.*') ? 'active' : '' }}" href="{{ route('majors.index') }}">
-=======
-                                                    <a class="nav-link {{ request()->routeIs('majors.*') ? 'active' : '' }}"
-                                                        href="{{ route('majors.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                                         <i class="fas fa-book"></i> Quản lý ngành học
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-<<<<<<< HEAD
                                                     <a class="nav-link {{ request()->routeIs('classes.*') ? 'active' : '' }}" href="{{ route('classes.index') }}">
-=======
-                                                    <a class="nav-link {{ request()->routeIs('classes.*') ? 'active' : '' }}"
-                                                        href="{{ route('classes.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                                         <i class="fas fa-users"></i> Quản lý lớp học
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-<<<<<<< HEAD
                                                     <a class="nav-link {{ request()->routeIs('subjects.*') ? 'active' : '' }}" href="{{ route('subjects.index') }}">
-=======
-                                                    <a class="nav-link {{ request()->routeIs('subjects.*') ? 'active' : '' }}"
-                                                        href="{{ route('subjects.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                                         <i class="fas fa-book-open"></i> Quản lý môn học
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-<<<<<<< HEAD
                                                     <a class="nav-link {{ request()->routeIs('teachers.*') ? 'active' : '' }}" href="{{ route('teachers.index') }}">
-=======
-                                                    <a class="nav-link {{ request()->routeIs('teachers.*') ? 'active' : '' }}"
-                                                        href="{{ route('teachers.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                                         <i class="fas fa-chalkboard-teacher"></i> Quản lý giáo viên
                                                     </a>
                                                 </li>
                                             @endif
                                             <li class="nav-item">
-<<<<<<< HEAD
                                                 <a class="nav-link {{ request()->routeIs('students.*') ? 'active' : '' }}" href="{{ route('students.index') }}">
-=======
-                                                <a class="nav-link {{ request()->routeIs('students.*') ? 'active' : '' }}"
-                                                    href="{{ route('students.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                                     <i class="fas fa-user-graduate"></i> Quản lý sinh viên
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-<<<<<<< HEAD
                                                 <a class="nav-link {{ request()->routeIs('grades.*') ? 'active' : '' }}" href="{{ route('grades.index') }}">
-=======
-                                                <a class="nav-link {{ request()->routeIs('grades.*') ? 'active' : '' }}"
-                                                    href="{{ route('grades.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                                     <i class="fas fa-chart-bar"></i> Quản lý điểm số
                                                 </a>
                                             </li>
@@ -478,82 +274,44 @@
                                 </div>
                             @endif
 
-<<<<<<< HEAD
                             @if(Auth::user()->role == 'admin')
-=======
-                            @if (Auth::user()->role == 'admin')
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                 @php
                                     $isActive = request()->routeIs(
                                         'academic-years.*',
                                         'semesters.*',
                                         'degrees.*',
                                         'class-size-coefficients.*',
-<<<<<<< HEAD
                                         'teaching-rates.*'
                                     );
                                 @endphp
                                 <div class="nav-group">
                                     <a class="nav-link" data-bs-toggle="collapse" href="#configMenu" role="button" aria-expanded="{{ $isActive ? 'true' : 'false' }}" aria-controls="configMenu">
-=======
-                                        'teaching-rates.*',
-                                    );
-                                @endphp
-                                <div class="nav-group">
-                                    <a class="nav-link" data-bs-toggle="collapse" href="#configMenu" role="button"
-                                        aria-expanded="{{ $isActive ? 'true' : 'false' }}" aria-controls="configMenu">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                         <i class="fas fa-sliders-h"></i> Cấu hình
                                     </a>
                                     <div class="collapse {{ $isActive ? 'show' : '' }}" id="configMenu">
                                         <ul class="nav flex-column ms-3">
                                             <li class="nav-item">
-<<<<<<< HEAD
                                                 <a class="nav-link {{ request()->routeIs('academic-years.*') ? 'active' : '' }}" href="{{ route('academic-years.index') }}">
-=======
-                                                <a class="nav-link {{ request()->routeIs('academic-years.*') ? 'active' : '' }}"
-                                                    href="{{ route('academic-years.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                                     <i class="fas fa-calendar-alt"></i> Quản lý năm học
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-<<<<<<< HEAD
                                                 <a class="nav-link {{ request()->routeIs('semesters.*') ? 'active' : '' }}" href="{{ route('semesters.index') }}">
-=======
-                                                <a class="nav-link {{ request()->routeIs('semesters.*') ? 'active' : '' }}"
-                                                    href="{{ route('semesters.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                                     <i class="fas fa-calendar"></i> Quản lý học kỳ
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-<<<<<<< HEAD
                                                 <a class="nav-link {{ request()->routeIs('degrees.*') ? 'active' : '' }}" href="{{ route('degrees.index') }}">
-=======
-                                                <a class="nav-link {{ request()->routeIs('degrees.*') ? 'active' : '' }}"
-                                                    href="{{ route('degrees.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                                     <i class="fas fa-award"></i> Quản lý học vị
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-<<<<<<< HEAD
                                                 <a class="nav-link {{ request()->routeIs('class-size-coefficients.*') ? 'active' : '' }}" href="{{ route('class-size-coefficients.index') }}">
-=======
-                                                <a class="nav-link {{ request()->routeIs('class-size-coefficients.*') ? 'active' : '' }}"
-                                                    href="{{ route('class-size-coefficients.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                                     <i class="fas fa-users-cog"></i> Hệ số sĩ số lớp
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-<<<<<<< HEAD
                                                 <a class="nav-link {{ request()->routeIs('teaching-rates.*') ? 'active' : '' }}" href="{{ route('teaching-rates.index') }}">
-=======
-                                                <a class="nav-link {{ request()->routeIs('teaching-rates.*') ? 'active' : '' }}"
-                                                    href="{{ route('teaching-rates.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                                     <i class="fas fa-money-bill-wave"></i> Mức lương giảng dạy
                                                 </a>
                                             </li>
@@ -566,50 +324,26 @@
                                         $isActive = request()->routeIs(
                                             'course-offerings.*',
                                             'class-sections.*',
-<<<<<<< HEAD
                                             'reports.*'
                                         );
                                     @endphp
                                     <a class="nav-link" data-bs-toggle="collapse" href="#operationsMenu" role="button" aria-expanded="{{ $isActive ? 'true' : 'false' }}" aria-controls="operationsMenu">
-=======
-                                            'reports.*',
-                                        );
-                                    @endphp
-                                    <a class="nav-link" data-bs-toggle="collapse" href="#operationsMenu" role="button"
-                                        aria-expanded="{{ $isActive ? 'true' : 'false' }}"
-                                        aria-controls="operationsMenu">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                         <i class="fas fa-cogs"></i> Nghiệp vụ
                                     </a>
                                     <div class="collapse {{ $isActive ? 'show' : '' }}" id="operationsMenu">
                                         <ul class="nav flex-column ms-3">
                                             <li class="nav-item">
-<<<<<<< HEAD
                                                 <a class="nav-link {{ request()->routeIs('course-offerings.*') ? 'active' : '' }}" href="{{ route('course-offerings.index') }}">
-=======
-                                                <a class="nav-link {{ request()->routeIs('course-offerings.*') ? 'active' : '' }}"
-                                                    href="{{ route('course-offerings.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                                     <i class="fas fa-calendar-alt"></i> Mở môn học
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-<<<<<<< HEAD
                                                 <a class="nav-link {{ request()->routeIs('class-sections.*') ? 'active' : '' }}" href="{{ route('class-sections.index') }}">
-=======
-                                                <a class="nav-link {{ request()->routeIs('class-sections.*') ? 'active' : '' }}"
-                                                    href="{{ route('class-sections.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                                     <i class="fas fa-list"></i> Lớp học phần
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-<<<<<<< HEAD
                                                 <a class="nav-link {{ request()->routeIs('reports.*') ? 'active' : '' }}" href="{{ route('reports.index') }}">
-=======
-                                                <a class="nav-link {{ request()->routeIs('reports.*') ? 'active' : '' }}"
-                                                    href="{{ route('reports.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                                     <i class="fas fa-chart-pie"></i> Báo cáo
                                                 </a>
                                             </li>
@@ -618,44 +352,24 @@
                                 </div>
                             @endif
 
-<<<<<<< HEAD
                             @if(Auth::user()->role == 'admin' || Auth::user()->role == 'teacher')
                                 <a class="nav-link {{ request()->routeIs('payrolls.*') ? 'active' : '' }}" href="{{ route('payrolls.index') }}">
-=======
-                            @if (Auth::user()->role == 'admin' || Auth::user()->role == 'teacher')
-                                <a class="nav-link {{ request()->routeIs('payrolls.*') ? 'active' : '' }}"
-                                    href="{{ route('payrolls.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                     <i class="fas fa-money-check-alt"></i> Bảng lương
                                 </a>
                             @endif
 
-<<<<<<< HEAD
                             @if(Auth::user()->role == 'student' && Auth::user()->student)
                                 <a class="nav-link {{ request()->routeIs('students.transcript') ? 'active' : '' }}" href="{{ route('students.transcript', Auth::user()->student->id) }}">
                                     <i class="fas fa-chart-line"></i> Bảng điểm
                                 </a>
                                 <a class="nav-link {{ request()->routeIs('enrollments.*') ? 'active' : '' }}" href="{{ route('enrollments.index') }}">
-=======
-                            @if (Auth::user()->role == 'student' && Auth::user()->student)
-                                <a class="nav-link {{ request()->routeIs('students.transcript') ? 'active' : '' }}"
-                                    href="{{ route('students.transcript', Auth::user()->student->id) }}">
-                                    <i class="fas fa-chart-line"></i> Bảng điểm
-                                </a>
-                                <a class="nav-link {{ request()->routeIs('enrollments.*') ? 'active' : '' }}"
-                                    href="{{ route('enrollments.index') }}">
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                                     <i class="fas fa-book-open"></i> Đăng ký lớp
                                 </a>
                             @endif
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
                 
-=======
-
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
                 <main class="col-md-10 content">
                     @include('partials.alerts')
                     @yield('content')
@@ -673,17 +387,10 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<<<<<<< HEAD
     
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
-=======
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
     <!-- Custom JS -->
     <script>
         // Toggle sidebar on mobile
@@ -698,15 +405,7 @@
             }
         });
     </script>
-<<<<<<< HEAD
     
     @stack('scripts')
 </body>
 </html> 
-=======
-
-    @stack('scripts')
-</body>
-
-</html>
->>>>>>> 67396e4529e366ab63360455e01ccaf2efafb410
