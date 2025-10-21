@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('subjects', function (Blueprint $table) {
-            //
+            $table->decimal('difficulty_ratio', 5, 2)->default(1)->after('credits');
         });
     }
 
@@ -22,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('subjects', function (Blueprint $table) {
-            //
+            $table->dropColumn('difficulty_ratio');
         });
     }
 };

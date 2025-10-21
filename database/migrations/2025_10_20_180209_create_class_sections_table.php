@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('class_sections', function (Blueprint $table) {
             $table->id();
+            $table->string('code')->unique();
+            $table->foreignId('subject_id')->constrained()->onDelete('cascade');
+            $table->foreignId('teacher_id')->constrained()->onDelete('cascade');
+            $table->string('room')->nullable();
+            $table->integer('period_count')->default(0);
+            $table->integer('student_count')->default(0);
             $table->timestamps();
         });
     }

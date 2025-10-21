@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('classes', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('code')->unique();
+            $table->foreignId('major_id')->constrained()->onDelete('cascade');
+            $table->integer('year');
             $table->timestamps();
         });
     }

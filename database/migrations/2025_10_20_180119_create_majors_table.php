@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('majors', function (Blueprint $table) {
             $table->id();
+            $table->string('name'); // Cột chứa tên ngành
+            $table->string('code')->unique(); // Cột chứa mã ngành (không trùng lặp)
+            $table->text('description')->nullable(); // Cột mô tả, có thể để trống
+
+            // Cột khóa ngoại liên kết với bảng 'faculties'
+            $table->unsignedBigInteger('faculty_id');
+            $table->foreign('faculty_id')->references('id')->on('faculties')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

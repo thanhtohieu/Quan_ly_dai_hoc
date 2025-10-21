@@ -6,20 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('class_size_coefficients', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('min_students');
+            $table->unsignedInteger('max_students');
+            $table->decimal('coefficient', 5, 2);
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('class_size_coefficients');
