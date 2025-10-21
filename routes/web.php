@@ -114,3 +114,7 @@ Route::middleware(['auth', 'role:student'])->group(function () {
     Route::post('class-sections/{classSection}/enroll', [\App\Http\Controllers\EnrollmentController::class, 'store'])->name('enrollments.store');
     Route::delete('enrollments/{enrollment}', [\App\Http\Controllers\EnrollmentController::class, 'destroy'])->name('enrollments.destroy');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

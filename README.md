@@ -1,61 +1,87 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Dự án Quản lý Đại học (qldaihoc) 
+## Đây là một dự án ứng dụng web được xây dựng bằng Laravel Framework để quản lý các hoạt động cơ bản trong một trường đại học. Ứng dụng cho phép quản lý thông tin về sinh viên, giảng viên, lớp học, môn học và các hoạt động liên quan. 
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Tính năng chính
+Quản lý Sinh viên: Thêm, sửa, xóa, và tìm kiếm thông tin sinh viên.
 
-## About Laravel
+Quản lý Giảng viên: Quản lý thông tin cá nhân và chuyên môn của giảng viên.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Quản lý Môn học: Tạo và quản lý danh sách các môn học trong chương trình đào tạo.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Quản lý Lớp học: Tổ chức các lớp học, phân công giảng viên và thêm sinh viên vào lớp.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Giao diện người dùng: Giao diện web trực quan để người dùng tương tác.
 
-## Learning Laravel
+Cơ sở dữ liệu: Sử dụng Migrations của Laravel để quản lý cấu trúc bảng một cách nhất quán.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Công nghệ sử dụng
+Backend: PHP 8.1+, Laravel 10.x
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Frontend: HTML, CSS, JavaScript (Sử dụng Blade Template Engine)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Database: MySQL 
 
-## Laravel Sponsors
+Quản lý gói: Composer cho PHP, NPM cho frontend assets.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Hướng dẫn cài đặt
+Vui lòng làm theo các bước sau để cài đặt và chạy dự án trên môi trường local.
 
-### Premium Partners
+Yêu cầu:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+PHP >= 8.1
 
-## Contributing
+Composer
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Node.js và NPM
 
-## Code of Conduct
+Một web server (ví dụ: XAMPP, Laragon) và một cơ sở dữ liệu (ví dụ: MySQL).
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Các bước cài đặt:
 
-## Security Vulnerabilities
+Clone repository
+```
+git clone https://github.com/thanhtohieu/Quan_ly_dai_hoc
+cd qldaihoc
+```
+Cài đặt các gói PHP
+```
+composer install
+```
+Tạo file môi trường (.env) Sao chép file .env.example thành file .env. File này chứa các cấu hình cho dự án.
+```
+cp .env.example .env
+```
+Tạo khóa ứng dụng (Application Key)
+```
+php artisan key:generate
+```
+Cấu hình cơ sở dữ liệu Mở file .env và chỉnh sửa các thông tin sau cho phù hợp với môi trường của bạn:
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=qldaihoc
+DB_USERNAME=root
+DB_PASSWORD=
+```
+Lưu ý: Bạn cần tạo một database trống với tên đã khai báo ở trên.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Chạy Migrations Lệnh này sẽ tạo các bảng trong cơ sở dữ liệu dựa trên các file migration của bạn.
+```
+php artisan migrate
+```
+Nếu bạn có Seeder để tạo dữ liệu mẫu, bạn có thể chạy:
+```
+php artisan migrate --seed
+```
+Cài đặt các gói frontend (Tùy chọn) Nếu dự án của bạn có sử dụng các gói Javascript/CSS.
+```
+npm install
+npm run dev
+```
+Khởi chạy dự án
+Để khởi động server phát triển local, chạy lệnh sau:
+```
+php artisan serve
+```
+Ứng dụng sẽ chạy tại địa chỉ: http://127.0.0.1:8000.

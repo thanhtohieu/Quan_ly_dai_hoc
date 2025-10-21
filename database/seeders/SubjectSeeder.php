@@ -2,51 +2,171 @@
 
 namespace Database\Seeders;
 
-use App\Models\Classes;
-use App\Models\Student;
-use App\Models\User;
+use App\Models\Subject;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class StudentSeeder extends Seeder
+class SubjectSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        // Lấy danh sách lớp học
-        $classes = Classes::all();
+        $subjects = [
+            // Môn học chung
+            [
+                'name' => 'Toán cao cấp',
+                'code' => 'MATH101',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kiến thức về đại số tuyến tính, giải tích và phương trình vi phân.',
+            ],
+            [
+                'name' => 'Vật lý đại cương',
+                'code' => 'PHYS101',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kiến thức cơ bản về cơ học, nhiệt học, điện từ học và quang học.',
+            ],
+            [
+                'name' => 'Tiếng Anh cơ bản',
+                'code' => 'ENG101',
+                'credits' => 2,
+                'description' => 'Môn học cung cấp kiến thức cơ bản về ngữ pháp, từ vựng và kỹ năng giao tiếp tiếng Anh.',
+            ],
+            [
+                'name' => 'Triết học Mác-Lênin',
+                'code' => 'PHIL101',
+                'credits' => 2,
+                'description' => 'Môn học cung cấp kiến thức về triết học Mác-Lênin, chủ nghĩa duy vật biện chứng và chủ nghĩa duy vật lịch sử.',
+            ],
 
-        // Lấy tài khoản sinh viên
-        $studentUsers = User::where('role', 'student')->get();
+            // Môn học CNTT
+            [
+                'name' => 'Lập trình cơ bản',
+                'code' => 'IT101',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kiến thức cơ bản về lập trình, cấu trúc dữ liệu và giải thuật.',
+            ],
+            [
+                'name' => 'Cơ sở dữ liệu',
+                'code' => 'IT201',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kiến thức về cơ sở dữ liệu, mô hình dữ liệu và ngôn ngữ truy vấn SQL.',
+            ],
+            [
+                'name' => 'Lập trình hướng đối tượng',
+                'code' => 'IT202',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kiến thức về lập trình hướng đối tượng, kế thừa, đa hình và trừu tượng hóa.',
+            ],
+            [
+                'name' => 'Mạng máy tính',
+                'code' => 'IT301',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kiến thức về mạng máy tính, giao thức mạng và bảo mật mạng.',
+            ],
+            [
+                'name' => 'Phát triển ứng dụng web',
+                'code' => 'IT302',
+                'credits' => 4,
+                'description' => 'Môn học cung cấp kiến thức về phát triển ứng dụng web, HTML, CSS, JavaScript và các framework web.',
+            ],
 
-        $i = 0;
-        foreach ($classes as $class) {
-            // Tạo sinh viên cho mỗi lớp
-            for ($j = 1; $j <= 10; $j++) {
-                $gender = $j % 2 == 0 ? 'Nam' : 'Nữ';
-                $userId = null;
+            // Môn học Kinh tế
+            [
+                'name' => 'Kinh tế vĩ mô',
+                'code' => 'ECON101',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kiến thức về kinh tế vĩ mô, tổng cung, tổng cầu và chính sách kinh tế.',
+            ],
+            [
+                'name' => 'Kinh tế vi mô',
+                'code' => 'ECON102',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kiến thức về kinh tế vi mô, cung cầu, thị trường và hành vi người tiêu dùng.',
+            ],
+            [
+                'name' => 'Nguyên lý kế toán',
+                'code' => 'ACC101',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kiến thức cơ bản về kế toán, nguyên tắc kế toán và báo cáo tài chính.',
+            ],
+            [
+                'name' => 'Quản trị học',
+                'code' => 'MGT101',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kiến thức về quản trị, các chức năng quản trị và kỹ năng quản lý.',
+            ],
 
-                // Gán tài khoản người dùng nếu còn
-                if ($i < $studentUsers->count()) {
-                    $userId = $studentUsers[$i]->id;
-                    $i++;
-                }
+            // Môn học Ngoại ngữ
+            [
+                'name' => 'Ngữ pháp tiếng Anh',
+                'code' => 'ENG201',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kiến thức chuyên sâu về ngữ pháp tiếng Anh.',
+            ],
+            [
+                'name' => 'Kỹ năng nghe nói tiếng Anh',
+                'code' => 'ENG202',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kỹ năng nghe và nói tiếng Anh trong các tình huống giao tiếp.',
+            ],
+            [
+                'name' => 'Kỹ năng đọc hiểu tiếng Anh',
+                'code' => 'ENG203',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kỹ năng đọc hiểu tiếng Anh trong các văn bản học thuật và thực tế.',
+            ],
+            [
+                'name' => 'Kỹ năng viết tiếng Anh',
+                'code' => 'ENG204',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kỹ năng viết tiếng Anh trong các thể loại văn bản khác nhau.',
+            ],
 
-                Student::create([
-                    'student_id' => 'SV' . str_pad($class->id * 100 + $j, 7, '0', STR_PAD_LEFT),
-                    'first_name' => 'Sinh viên',
-                    'last_name' => $class->code . ' ' . $j,
-                    'date_of_birth' => date('Y-m-d', strtotime('-' . (18 + $j % 5) . ' years')),
-                    'gender' => $gender,
-                    'email' => 'sv' . $class->code . $j . '@example.com',
-                    'phone' => '097' . str_pad($class->id, 3, '0', STR_PAD_LEFT) . str_pad($j, 4, '0', STR_PAD_LEFT),
-                    'address' => 'Địa chỉ sinh viên ' . $j . ', Lớp ' . $class->name,
-                    'class_id' => $class->id,
-                    'user_id' => $userId,
-                ]);
-            }
+            // Môn học Điện - Điện tử
+            [
+                'name' => 'Mạch điện',
+                'code' => 'EE101',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kiến thức về mạch điện, phân tích mạch điện và các định luật cơ bản.',
+            ],
+            [
+                'name' => 'Điện tử cơ bản',
+                'code' => 'EE201',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kiến thức về linh kiện điện tử, mạch điện tử và kỹ thuật số.',
+            ],
+            [
+                'name' => 'Vi xử lý',
+                'code' => 'EE301',
+                'credits' => 4,
+                'description' => 'Môn học cung cấp kiến thức về vi xử lý, kiến trúc máy tính và lập trình vi điều khiển.',
+            ],
+
+            // Môn học Xây dựng
+            [
+                'name' => 'Cơ học kết cấu',
+                'code' => 'CE101',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kiến thức về cơ học kết cấu, phân tích kết cấu và thiết kế kết cấu.',
+            ],
+            [
+                'name' => 'Vật liệu xây dựng',
+                'code' => 'CE201',
+                'credits' => 3,
+                'description' => 'Môn học cung cấp kiến thức về vật liệu xây dựng, tính chất và ứng dụng của vật liệu.',
+            ],
+            [
+                'name' => 'Thiết kế kiến trúc',
+                'code' => 'ARCH101',
+                'credits' => 4,
+                'description' => 'Môn học cung cấp kiến thức về thiết kế kiến trúc, nguyên tắc thiết kế và phương pháp thiết kế.',
+            ],
+        ];
+
+        foreach ($subjects as $subject) {
+            Subject::create($subject + ['coefficient' => 1]);
         }
     }
 }
