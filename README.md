@@ -1,5 +1,5 @@
-Dự án Quản lý Đại học (qldaihoc)
-Đây là một dự án ứng dụng web được xây dựng bằng Laravel Framework để quản lý các hoạt động cơ bản trong một trường đại học. Ứng dụng cho phép quản lý thông tin về sinh viên, giảng viên, lớp học, môn học và các hoạt động liên quan.
+# Dự án Quản lý Đại học (qldaihoc) 
+## Đây là một dự án ứng dụng web được xây dựng bằng Laravel Framework để quản lý các hoạt động cơ bản trong một trường đại học. Ứng dụng cho phép quản lý thông tin về sinh viên, giảng viên, lớp học, môn học và các hoạt động liên quan. 
 
 Tính năng chính
 Quản lý Sinh viên: Thêm, sửa, xóa, và tìm kiếm thông tin sinh viên.
