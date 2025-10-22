@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             CourseOfferingSeeder::class, // Tạo các học phần và lớp học phần
             EnrollmentSeeder::class,  // Đăng ký lớp học phần
             GradeSeeder::class,        // Tạo điểm số (phụ thuộc vào sinh viên và môn học)
+            DegreeSeeder::class,
         ]);
     }
 }
